@@ -1,95 +1,129 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import Button from '@/components/Button/Button';
+import Count from '@/components/CountDown/Count';
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import Testimonial from '@/components/Testimonial/TestimonialCard';
+import { Projects } from '@/components/Testimonial/data';
+import Image from 'next/image';
+import Category from './category/page';
+import styles from './page.module.css';
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+import MayabiPhoto from '@/components/MayabiPhoto/MayabiPhoto';
+
+import 'aos/dist/aos.css';
+
+import Motion from '@/components/Motion/Motion';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+	desktop: {
+		breakpoint: { max: 3000, min: 1024 },
+		items: 1,
+		slidesToSlide: 1, // optional, default to 1.
+	},
+	tablet: {
+		breakpoint: { max: 1024, min: 464 },
+		items: 1,
+		slidesToSlide: 1, // optional, default to 1.
+	},
+	mobile: {
+		breakpoint: { max: 464, min: 0 },
+		items: 1,
+		slidesToSlide: 1, // optional, default to 1.
+	},
+};
+
+const carouselItems = [
+	{ image: '/sony1.jpg', alt: 'sony1' },
+	{ image: '/sonymahim.jpg', alt: 'sonymahim' },
+	{ image: '/mayabisony.png', alt: 'mayabisony' },
+	{ image: '/sony5.jpg', alt: 'sony5' },
+	{ image: '/sonyglass.JPG', alt: 'sonyglass' },
+	{ image: '/babasony.jpg', alt: 'babasony' },
+	{ image: '/amisony5.JPG', alt: 'amisony5' },
+];
+
+const home = () => {
+	return (
+		<div className={styles.mainContainer}>
+			<Carousel
+				additionalTransfrom={0}
+				arrows={false}
+				autoPlay
+				autoPlaySpeed={2500}
+				centerMode={false}
+				infinite
+				responsive={responsive}
+				itemClass="item"
+				showDots
+			>
+				{carouselItems.map((item, index) => (
+					<div key={index} className={styles.container}>
+						<h1 className={styles.title}>We Miss You </h1>
+						<div className={styles.subContainer}>
+							<div className={styles.textContainer}>
+								<h1 className={styles.postTitle}>We Miss You very much</h1>
+								<p className={styles.postDesc}>
+									We are very sorry we were not there for you. You may be gone
+									from our sight, but you are never gone from our heart. Our
+									mind still talks to you. Our heart still looks for you. Our
+									soul knows you are at peace. But we still miss you.
+								</p>
+								<div className={styles.button}>
+									<Button url="/portfolio" text="See Our Work" />
+								</div>
+							</div>
+							<div className={styles.imgContainer}>
+								<Image
+									src={item.image}
+									alt={item.alt}
+									height={400}
+									width={400}
+									className={styles.sony}
+								/>
+							</div>
+						</div>
+					</div>
+				))}
+			</Carousel>
+
+			<Count />
+
+			<div className={styles.photoHeader}>
+				<h1 className={styles.photoTitle}>Lovely Pictures</h1>
+				<MayabiPhoto />
+			</div>
+
+			<div className={styles.testimonialContainer}>
+				<h1 className={styles.testimonialHeader}>Testimonial</h1>
+
+				<div className={styles.testimonial}>
+					<div className={styles.testimonialMap}>
+						{Projects.map((project, index) => (
+							<Testimonial
+								key={index}
+								title={project.title}
+								desc={project.desc}
+								text={project.text}
+								image={project.url}
+							/>
+						))}
+					</div>
+				</div>
+			</div>
+
+			<Category />
+			<div className={styles.motionContainer}>
+				<h1 className={styles.motionHeader}>About me</h1>
+
+				<Motion />
+				<p className={styles.motionDesc}>
+					Every Day Is A Chance To Begin Again.
+				</p>
+			</div>
+		</div>
+	);
+};
+
+export default home;
