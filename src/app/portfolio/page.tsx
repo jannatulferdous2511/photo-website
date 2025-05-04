@@ -9,6 +9,7 @@ const Portfolio = () => {
 	return (
 		<div className={styles.container}>
 			<h1 className={styles.selectTitle}>Choose A Gallery</h1>
+
 			<div className={styles.itemsHover}>
 				<div className={styles.items}>
 					<Link

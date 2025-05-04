@@ -21,6 +21,14 @@
 	background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	background-clip: text;
+	color: transparent;
+
+	margin-top: 0;
+	margin-bottom: 0;
+
+	text-align: center;
 }
 .picture {
 	width: 100%;

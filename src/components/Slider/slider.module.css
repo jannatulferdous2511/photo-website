@@ -93,35 +93,25 @@
 }
 
 @media screen and (max-width: 768px) {
-	.slider {
-		position: relative;
-		overflow: hidden;
-	}
-	.wrapper {
-		height: 100%;
-		position: relative;
-	}
-	.title {
-		font-size: 22px;
-	}
-
-	.imageContainer {
-		height: 100%;
-		width: 850px;
-
-		position: relative;
+	.imgText {
+		right: 20px;
+		bottom: 20px;
+		font-size: 14px;
+		padding: 8px;
+		text-align: center;
+		color: rgb(242, 157, 217);
 	}
 
 	.img {
+		object-position: center;
 		object-fit: contain;
 	}
 
-	.imgText {
-		position: absolute;
-		right: 120px;
-		top: 550px;
-
-		color: rgb(252, 88, 203);
+	.slider,
+	.wrapper,
+	.imageContainer {
+		height: 100vh;
+		width: 100%;
 	}
 }
 

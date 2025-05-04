@@ -4,11 +4,21 @@
 
 	gap: 30px;
 }
-.header {
-	align-items: center;
+
+.title {
+	font-size: 50px;
+
+	background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	background-clip: text;
+	color: transparent;
+
+	margin-top: 0;
+	margin-bottom: 0;
 
 	text-align: center;
-	justify-content: center;
 }
 .subContainer {
 	align-items: center;
@@ -110,14 +120,25 @@
 	.map {
 		width: 100%;
 	}
-}
+	.title {
+		font-size: 50px;
 
-.title {
-	margin-top: 50px;
-	font-size: 50px;
-	text-align: center;
+		background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 
-	background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+
+		margin-top: 0;
+		margin-bottom: 0;
+
+		text-align: center;
+	}
+	.img {
+		object-fit: contain;
+	}
+	.date {
+		font-size: 18px;
+	}
 }

@@ -12,10 +12,17 @@
 }
 .title {
 	font-size: 60px;
-
 	background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	background-clip: text;
+	color: transparent;
+
+	margin-top: 0;
+	margin-bottom: 0;
+
+	text-align: center;
 }
 .headerPic {
 	align-items: center;
@@ -104,10 +111,17 @@
 @media screen and (max-width: 1280px) {
 	.title {
 		font-size: 52px;
-
 		background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+
+		background-clip: text;
+		color: transparent;
+
+		margin-top: 0;
+		margin-bottom: 0;
+
+		text-align: center;
 	}
 	.headerPic {
 		align-items: center;
@@ -137,18 +151,80 @@
 		text-align: center;
 	}
 }
+@media screen and (max-width: 1024px) {
+	.title {
+		font-size: 52px;
+		background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		background-clip: text;
+		color: transparent;
+
+		margin-top: 0;
+		margin-bottom: 0;
+
+		text-align: center;
+	}
+	.headerPic {
+		align-items: center;
+		text-align: center;
+	}
+	.headerPicImg {
+		object-fit: contain;
+		height: 480px;
+		width: 400px;
+	}
+	.map {
+		width: 35%;
+	}
+	.imgContainer {
+		width: 100%;
+		position: relative;
+		height: 600px;
+		gap: 15px;
+	}
+	.picture {
+		display: flex;
+		flex-wrap: wrap;
+
+		gap: 50px;
+		align-items: center;
+		text-align: center;
+	}
+	.img {
+		object-fit: contain;
+	}
+}
 @media screen and (max-width: 768px) {
 	.map {
 		width: 100%;
 	}
-}
+	.title {
+		font-size: 50px;
+		background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 
-.title {
-	margin-top: 50px;
-	font-size: 50px;
-	text-align: center;
+		background-clip: text;
+		color: transparent;
 
-	background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+		margin-top: 0;
+		margin-bottom: 0;
+
+		text-align: center;
+	}
+	.img {
+		object-fit: contain;
+	}
+	.desc {
+		font-size: 25px;
+		text-align: center;
+		align-items: center;
+	}
+	.date {
+		font-size: 18px;
+		text-align: center;
+		align-items: center;
+	}
 }

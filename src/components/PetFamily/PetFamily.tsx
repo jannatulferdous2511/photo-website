@@ -1,8 +1,10 @@
 'use client';
+
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Family from '../Family/Family';
+import { familyData } from './data';
 import styles from './petFamily.module.css';
 
 const responsive = {
@@ -21,9 +23,9 @@ const responsive = {
 		items: 1,
 		slidesToSlide: 1,
 	},
-};
+} as const;
 
-const PetFamily = () => {
+const PetFamily: React.FC = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.familyContainer}>
@@ -33,89 +35,24 @@ const PetFamily = () => {
 					<Carousel
 						additionalTransfrom={0}
 						arrows={false}
-						autoPlay={true}
+						autoPlay
 						autoPlaySpeed={2500}
 						centerMode={false}
 						infinite
 						responsive={responsive}
 						itemClass="item"
-						showDots={true}
+						showDots
 					>
-						<div className={styles.family}>
-							<Family
-								title="Vanila"
-								image="/vanila.jpg"
-								reviews="6"
-								date="30.9.2024"
-							/>
-						</div>
-						<div className={styles.family}>
-							<Family
-								title="Sugary"
-								image="/sugary1.jpg"
-								reviews="6"
-								date="30.9.2024"
-							/>
-						</div>
-						<div className={styles.family}>
-							<Family
-								title="Blacky2"
-								image="/blacky2.jpg"
-								reviews="6"
-								date="25.5.2024"
-							/>
-						</div>
-
-						<div className={styles.family}>
-							<Family
-								title="Sony"
-								image="/sony7.jpg"
-								reviews="6"
-								date="25.5.2024"
-							/>
-						</div>
-						<div className={styles.family}>
-							<Family
-								title="Sony"
-								image="/sonyamimahim.jpg"
-								reviews="6"
-								date="25.5.2024"
-							/>
-						</div>
-
-						<div className={styles.family}>
-							<Family
-								title="Sony"
-								image="/sonymahim3.jpg"
-								reviews="6"
-								date="25.5.2024"
-							/>
-						</div>
-						<div className={styles.family}>
-							<Family
-								title="Mummum"
-								image="/mummum36.JPG"
-								reviews="6"
-								date="25.5.2024"
-							/>
-						</div>
-						<div className={styles.family}>
-							<Family
-								title="Mummum"
-								image="/mummumsofa1.JPG"
-								reviews="6"
-								date="25.5.2024"
-							/>
-						</div>
-
-						<div className={styles.family}>
-							<Family
-								title="Mummum"
-								image="/vanilafm.jpg"
-								reviews="6"
-								date="25.5.2024"
-							/>
-						</div>
+						{familyData.map((item, index) => (
+							<div className={styles.family} key={index}>
+								<Family
+									title={item.title}
+									image={item.image}
+									reviews={item.reviews}
+									date={item.date}
+								/>
+							</div>
+						))}
 					</Carousel>
 				</div>
 			</div>

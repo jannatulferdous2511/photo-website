@@ -2,7 +2,7 @@ export const items = [
 	{
 		id: 1,
 		title: 'UBC',
-		desc: 'get together for birthday party',
+		desc: ' get together for birthday party',
 		image: '/mahim48.jpg',
 
 		date: '5.6.2022',

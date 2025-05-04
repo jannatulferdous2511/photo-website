@@ -10,14 +10,30 @@
 }
 .mainTitle {
 	font-size: 100px;
+
 	background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	background-clip: text;
+	color: transparent;
+
+	margin-top: 0;
+	margin-bottom: 0;
+
+	text-align: center;
 }
 
 .selectTitle {
+	background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	background-clip: text;
+	color: transparent;
 	margin: 20px 0px;
 }
+
 .items {
 	display: flex;
 	gap: 50px;
@@ -142,6 +158,18 @@
 		background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+
+		background-clip: text;
+		color: transparent;
+
+		margin-top: 0;
+		margin-bottom: 0;
+
+		text-align: center;
+	}
+
+	.selectTitle {
+		margin: 20px 0px;
 	}
 
 	.portfolioItems {
@@ -192,7 +220,13 @@
 		background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		align-items: center;
+
+		background-clip: text;
+		color: transparent;
+
+		margin-top: 0;
+		margin-bottom: 0;
+
 		text-align: center;
 	}
 

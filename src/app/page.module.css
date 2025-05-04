@@ -221,7 +221,7 @@
 	}
 
 	.postDesc {
-		font-size: 15px;
+		font-size: 20px;
 		font-weight: 400;
 
 		color: rgb(176, 136, 165);
@@ -299,18 +299,16 @@
 	.subContainer {
 		gap: 50px;
 	}
+
 	.textContainer {
+		flex: 1;
 		display: flex;
-
 		flex-direction: column;
-		text-align: center;
-		justify-content: center;
-
-		align-items: center;
-
-		width: 100%;
-		margin-bottom: 50px;
+		gap: 5px;
+		margin-top: none;
+		margin-bottom: 20px;
 	}
+
 	.postTitle {
 		background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
 		-webkit-background-clip: text;
@@ -328,9 +326,12 @@
 		gap: 50px;
 	}
 	.postDesc {
-		font-size: 15px;
-		text-align: justify;
+		font-size: 20px;
+		margin: 10px;
 		align-items: center;
+		text-align: center;
+		text-align: justify;
+
 		justify-content: center;
 	}
 

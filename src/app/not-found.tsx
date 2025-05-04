@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-type Props = {};
-
-const NotFound = (props: Props) => {
+const NotFound = () => {
 	return (
 		<div>
 			<h2>NotFound</h2>

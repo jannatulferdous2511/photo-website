@@ -9,10 +9,17 @@
 	overflow: hidden;
 }
 .familyTitle {
-	margin: 40px 0px;
+	font-size: 50px;
+
 	background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	background-clip: text;
+	color: transparent;
+
+	margin-top: 0;
+	margin-bottom: 0;
 
 	text-align: center;
 }
@@ -28,6 +35,8 @@
 	align-items: center;
 	text-align: center;
 	justify-content: center;
+	margin-top: 25px;
+	margin-bottom: 20px;
 }
 .family {
 	align-items: center;
@@ -37,28 +46,27 @@
 
 @media (max-width: 768px) {
 	.container {
-		display: flex;
 		flex-direction: column;
-		text-align: center;
-		align-items: center;
-		justify-items: center;
-		margin-left: 30px;
+		padding: 20px;
 	}
 
 	.familyTitle {
-		margin: 50px 0px;
-		background: linear-gradient(to bottom, #ed7ed5, #e0d9df);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		font-size: 36px;
+	}
 
-		text-align: center;
+	.familyContainer {
+		margin-top: 30px;
 	}
 
 	.carousel {
-		width: 90%;
-		margin-left: 5px;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		width: 100%;
+	}
 
-		margin-top: 20px;
-		padding-top: 10px;
+	.family {
+		width: 100%;
 	}
 }

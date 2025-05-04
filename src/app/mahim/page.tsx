@@ -16,8 +16,8 @@ const Mahim = () => {
 					className={styles.ubc}
 					alt=""
 					src="/mahimubc.JPG"
-					height={550}
-					width={1000}
+					height={650}
+					width={1200}
 				/>
 			</div>
 			<div className={styles.picture}>
@@ -35,7 +35,6 @@ const Mahim = () => {
 						</div>
 
 						<div className={styles.bottom}>
-							<p className={styles.desc}>{item.desc}</p>
 							<span className={styles.date}>{item.date}</span>
 						</div>
 					</div>

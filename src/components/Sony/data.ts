@@ -21,4 +21,5 @@ export const items = [
 	{ id: 19, img: '/sonybaba5.JPG' },
 	{ id: 20, img: '/sony17.JPG' },
 	{ id: 21, img: '/sonymahim6.JPG' },
+	{ id: 22, img: '/sonymahim7.JPG' },
 ];

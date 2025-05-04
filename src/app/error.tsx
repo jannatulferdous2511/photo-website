@@ -2,9 +2,7 @@
 
 import React from 'react';
 
-type Props = {};
-
-const Error = (props: Props) => {
+const Error = () => {
 	return <div>Error</div>;
 };
 
